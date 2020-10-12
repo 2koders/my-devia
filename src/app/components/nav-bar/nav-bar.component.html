@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark text-white bg-dark-t">
   <a class="navbar-brand" href="#">
     <img src="../../../assets/devia-icon.png" width="45" alt="">
   </a>
@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">Inicio</a>
+        <a class="nav-link font-weight-bold" [routerLink]="[ '/' ]" routerLinkActive="active">Inicio</a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
@@ -27,9 +27,15 @@
         </div>
       </li> -->
     </ul>
-    <a class="navbar-brand" [routerLink]="[ 'profile' ]">
-      <span class="text-simple mr-2">¡Hola, {{user.name}}!</span>
-      <img src="../../../assets/user.jpg" class="rounded-circle border border-info" height="45" alt="">
-    </a>
+    <ul class="m-0" *ngIf="user.isLoged">
+      <a class="navbar-brand" [routerLink]="[ 'profile' ]">
+        <span class="text-simple mr-2">¡Hola, {{user.name}}!</span>
+        <img src="{{user.imgProfile}}" class="rounded-circle border border-info" height="45" alt="">
+      </a>
+    </ul>      
+    <ul class="m-0" *ngIf="!user.isLoged">
+      <a class="navbar-brand btn text-white btn-primary" [routerLink]="[ 'login' ]">Iniciar Sesion</a>
+      <a class="navbar-brand btn text-white btn-primary" [routerLink]="[ 'signin' ]">Registrarse</a>
+    </ul>    
   </div>
 </nav>

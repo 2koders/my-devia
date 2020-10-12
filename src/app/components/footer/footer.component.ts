@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// import { faInstagram, faFacebook, faTwitter, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
+// import { faEnvelope, faMapMarkerAlt, faPhone} from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'dev-footer',
   templateUrl: './footer.component.html',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  copyYear: number;
+  // facebook = faFacebook;
+  // instagram = faInstagram;
+  // twitter = faTwitter;
+  // youtube = faYoutube;
+  // whatsapp = faWhatsapp;
+  // phone = faPhone;
+  // mail = faEnvelope;
+  // location = faMapMarkerAlt;
 
-  ngOnInit(): void {
+  constructor() { 
+    this.copyYear = new Date().getFullYear();
+  }
+
+  ngOnInit() {
   }
 
 }

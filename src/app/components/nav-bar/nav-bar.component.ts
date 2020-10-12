@@ -14,7 +14,9 @@ export class NavBarComponent implements OnInit {
   constructor() { 
     this.user = {
       id: 1,
-      name: "Pedro"
+      name: "Pedro",
+      imgProfile: "../../../assets/user.jpg",
+      isLoged: true
     }
   }
 
