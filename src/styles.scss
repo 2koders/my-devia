@@ -1,5 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 
-.bg-dark-t{
-    background-color: rgba(0, 0, 0, 0.322);
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header-container{
+    /* We want the header to have a static height, 
+    it will always take up just as much space as it needs.  */
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+ }
+ 
+ .main-content{
+    /* By setting flex-grow to 1, the main content will take up 
+    all of the remaining space on the page. 
+    The other elements have flex-grow: 0 and won't contest the free space. */
+    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 1 0 auto;
+ }
+ 
+ .footer-container{
+    /* Like the header, the footer will have a static height - it shouldn't grow or shrink.  */
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+ }
+
+ .bg-dark-sky{
+    background: #18191a;
+
+    li{
+        background-color: transparent;
+        :hover{
+            background: #1b1c1d !important;
+        }
+    }
+}
+
+.text-dark-sky{
+    color: #18191a;
+}
+
+a .bg-dark-sky{
+    :hover{
+        background: #1b1c1d !important;
+    }
+}
+
+.text-pink{
+    color: #fd56d9;
+}
+
+.btn-dark-sky{
+    background: #18191a;
+    color: white;
+}
+
+.list-group-item-action{
+    transition: .3s;
+    :hover{
+        color: white !important;
+        background: #1b1c1d !important;
+    }
 }
