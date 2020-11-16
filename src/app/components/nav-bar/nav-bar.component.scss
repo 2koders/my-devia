@@ -5,3 +5,9 @@ img{
 .text-simple{
     font-size: 1.75vmin;
 }
+
+sh{
+    -webkit-box-shadow: 0px 0px 81px -32px rgba(0,0,0,0.92);
+-moz-box-shadow: 0px 0px 81px -32px rgba(0,0,0,0.92);
+box-shadow: 0px 0px 81px -32px rgba(0,0,0,0.92);
+}
