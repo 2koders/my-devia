@@ -16,7 +16,7 @@ export class NavBarComponent implements OnInit {
       id: 1,
       name: "Pedro",
       imgProfile: "../../../assets/user.jpg",
-      isLoged: false
+      isLoged: true
     }
   }
 
